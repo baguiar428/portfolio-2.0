@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import {useRouter} from "next/navigation"
+//import {useRouter} from "next/navigation"
 import Logo from "./Logo";
+import {GithubIcon, LinkedInIcon, BlogIcon} from "./Icons"
 
 const CustomLink = ({ href, title, className = "" }) => {
   
@@ -39,13 +40,13 @@ const NavBar = () => {
 
       <nav>
         <Link href="https://github.com/baguiar428" target="_blank">
-          G
+          <GithubIcon/>
         </Link>
         <Link href="https://www.linkedin.com/in/aguiarbruno/" target="_blank">
-          L
+          <LinkedInIcon/>
         </Link>
         <Link href="https://baguiar428.github.io/" target="_blank">
-          B
+          <BlogIcon/>
         </Link>
       </nav>
 
