@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 //import {useRouter} from "next/navigation"
 import Logo from "./Logo";
-import { GithubIcon, LinkedInIcon, BlogIcon } from "./Icons";
+import { GithubIcon, LinkedInIcon, BlogIcon, DribbbleIcon } from "./Icons";
 import { motion } from "framer-motion";
 
 const CustomLink = ({ href, title, className = "" }) => {
@@ -67,6 +67,15 @@ const NavBar = () => {
           className="w-6 ml-3"
         >
           <BlogIcon />
+        </motion.a>
+        <motion.a
+          href="https://dribbble.com/TalkAboutBruno"
+          target="_blank"
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-6 ml-3"
+        >
+          <DribbbleIcon />
         </motion.a>
       </nav>
 
