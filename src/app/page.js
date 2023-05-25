@@ -46,6 +46,10 @@ export default function Home() {
         </div>
       </Layout>
       <HireMe/>
+      {/* Maybe put an image here?... */}
+      {/* <div>
+        <Image/>
+      </div> */}
     </main>
   );
 }

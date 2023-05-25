@@ -16,6 +16,9 @@ module.exports = {
         primary: "#B63E96", // Swipe color
         primaryDark: "#58E6D9", // 80,230,217
       },
+      animation: {
+        'spin-slow': 'spin 9s linear infinite',
+      },
     },
   },
   plugins: [],
