@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import Image from "next/image";
 import bioPic from "../../../public/images/about/bio_pic.png";
 import Skills from "../components/Skills";
+import Experience from "../components/Experience";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -114,6 +115,7 @@ export default function Page() {
             </div>
           </div>
           <Skills />
+          <Experience/>
         </Layout>
       </main>
     </>
