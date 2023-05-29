@@ -5,28 +5,91 @@ import AnimatedText from "../components/AnimatedText";
 import Link from "next/link";
 import Image from "next/image";
 import { GithubIcon } from "../components/Icons";
-// import OGportfolio from "../../../public/images/projects/portfolio_v1-1.png"
-
-const FeaturedProject = (type, title, summary, pic, link, github) => {
+import ogPortfolio from "../../../public/images/projects/portfolio_v1-1.png";
+import blogPic from "../../../public/images/projects/TAB_Blog.png";
+import assetTransmogrifier from "../../../public/images/projects/asset_transmogrifier.png"
+import newRecoupPic from "../../../public/images/projects/new_recoup_collage.png"
+const FeaturedProject = ({
+  type,
+  title,
+  summary,
+  picture,
+  website,
+  github,
+}) => {
   return (
-    <article>
-      <Link href={link} target="_blank">
-        <Image src={pic} alt={title} className="w-full h-auto" />
+    <article className="w-full flex items-center justify-between relative rounded-3xl rounded-br-2xl border border-solid border-dark bg-light shadow-2xl p-12">
+      <div className="absolute top-0 -right-4 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-dark" />
+
+      <Link
+        href={website}
+        target="_blank"
+        className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
+      >
+        <Image src={picture} alt={title} className="w-full h-auto" />
       </Link>
-      <div>
-        <span>{type}</span>
-        <Link href={link} target="_blank">
-          <h2>{title}</h2>
+      <div className="w-1/2 flex flex-col items-start justify-between pl-6">
+        <span className="text-primary font-medium text-xl">{type}</span>
+        <Link
+          href={website}
+          target="_blank"
+          className="hover:underline underline-offset-2"
+        >
+          <h2 className="my-2 w-full text-left text-4xl font-bold">{title}</h2>
         </Link>
-        <p>{summary}</p>
-        <div>
-          <Link href={github} target="_blank">
+        <p className="my-2 font-medium text-dark">{summary}</p>
+        <div className="mt-2 flex items-center">
+          <Link href={github} target="_blank" className="w-10">
             {" "}
             <GithubIcon />{" "}
           </Link>
           {/* If you want to add a live link to visit project  */}
-          <Link href={link} target="_blank">
+          <Link
+            href={website}
+            target="_blank"
+            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold"
+          >
             Visit Project
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+};
+
+const Project = ({ title, type, summary, picture, website, github }) => {
+  return (
+    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark" />
+
+      <Link
+        href={website}
+        target="_blank"
+        className="w-full cursor-pointer overflow-hidden rounded-lg"
+      >
+        <Image src={picture} alt={title} className="w-full h-auto" />
+      </Link>
+      <div className="w-full flex flex-col items-start justify-between mt-4">
+        <span className="text-primary font-medium text-xl">{type}</span>
+        <Link
+          href={website}
+          target="_blank"
+          className="hover:underline underline-offset-2"
+        >
+          <h2 className="my-2 w-full text-left text-3xl font-bold">{title}</h2>
+        </Link>
+        <p className="my-2 font-medium text-dark">{summary}</p>
+        <div className="w-full mt-2 flex items-center justify-between">
+          {/* If you want to add a live link to visit project  */}
+          <Link
+            href={website}
+            target="_blank"
+            className="text-lg font-semibold underline underline-offset-2"
+          >
+            Visit Project
+          </Link>
+          <Link href={github} target="_blank" className="w-8">
+            <GithubIcon />{" "}
           </Link>
         </div>
       </div>
@@ -43,19 +106,51 @@ const page = () => {
       </Head>
       <main className="w-full mb-16 flex flex-col items-center justify-center">
         <Layout className="pt-16">
-          <AnimatedText text="Let's Create and Build!" />
+          <AnimatedText text="Let's Create and Build!" className="mb-16" />
 
-          <div className="grid grid-cols-12 gap-24">
+          <div className="grid grid-cols-12 gap-24 gap-y-32">
             <div className="col-span-12">
-              <FeaturedProject />
+              <FeaturedProject
+                title="Portfolio 1.0"
+                picture={ogPortfolio}
+                summary="Original version of my portfolio page. Used Next.js with Pages Router and Tailwind CSS."
+                website="https://github.com/baguiar428/Portfolio"
+                type="Featured Project"
+                github="https://github.com/baguiar428/Portfolio"
+              />
             </div>
             {/* For two side by side projects view use code below */}
-            {/* <div className="col-span-6">
-                    Second Project
-                </div>
-                <div className="col-span-6">
-                    Third Project
-                </div> */}
+            <div className="col-span-6">
+              <Project
+                title="T.A.B - Blog"
+                picture={blogPic}
+                summary="Simple but elegant blog website using Github Pages and Beautiful Jekyll"
+                website="https://baguiar428.github.io/"
+                type="Blog Site"
+                github="https://github.com/baguiar428/Portfolio"
+              />
+            </div>
+            <div className="col-span-6">
+            <Project
+                title="Asset Transmogrifier"
+                picture={assetTransmogrifier}
+                summary="A BASH shell script for converting a batch download list from Windows to Unix format."
+                website="https://github.com/baguiar428/Asset-Transmogrifier"
+                type="System Utility Script"
+                github="https://github.com/baguiar428/Asset-Transmogrifier"
+              />
+            </div>
+            <div className="col-span-12">
+              <FeaturedProject
+                title="New Recoup Wellness"
+                picture={newRecoupPic}
+                summary="Web Portal for Massage Therapists to create an Address Book which can be used to create email mailing lists or send out an SMS message.
+                Clients can schedule an appointment via Calendly on the landing page. Massage Therapists can log-in to manage address book and marketing."
+                website="https://newrecoup.com/"
+                type="Flatiron Capstone"
+                github="https://github.com/baguiar428/flatiron-capstone"
+              />
+            </div>
           </div>
         </Layout>
       </main>
