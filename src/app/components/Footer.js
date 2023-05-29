@@ -14,7 +14,7 @@ const Footer = () => {
             {/* </div> */}
             <div>
             <Link href="mailto:b.aguiar428@gmail.com" target="_blank">Say Hi!</Link>
-            <span className='text-primary text-2xl pl-1'>&#9825;</span>
+            <span className='text-heart text-2xl pl-1'>&#9825;</span>
             </div>
         </Layout>
     </footer>

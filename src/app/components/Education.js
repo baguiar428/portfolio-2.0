@@ -58,7 +58,7 @@ className="absolute left-9 top-1 w-[4px] h-full bg-dark origin-top"/>
           <Details
             type="LPIC-1: Linux Administrator Certification"
             time="Aug 2017"
-            place="Linux Professional Institute (LPI)Y"
+            place="Linux Professional Institute (LPI)"
           />
           <Details
             type="Bachelors Degree in Liberal Arts, Information Technology"
