@@ -2,7 +2,7 @@ import React, {useRef} from "react";
 import { motion, useScroll } from "framer-motion"
 import LiIcon from "./LiIcon";
 
-const Details = ({ position, company, companyLink, time, address }) => {
+const Details = ({ position, company, companyLink, time, address, work }) => {
     
     const ref = useRef(null);
   
@@ -25,9 +25,9 @@ const Details = ({ position, company, companyLink, time, address }) => {
         </span>
         {/* To add a work description include below 
             and add "work" as argument to "Details"  */}
-        {/* <p className="font-medium w-full">
+        <p className="font-medium w-full">
                 {work}
-            </p> */}
+            </p>
       </motion.div>
     </li>
   );
@@ -60,6 +60,7 @@ className="absolute left-9 top-1 w-[4px] h-full bg-dark origin-top"/>
             companyLink="https://flatironschool.com/"
             time="Sep 2022 - Jan 2023"
             address="Remote"
+            work="15 week full-time course focusing on Full Stack Development. Practical experience with Javascript (React), Ruby on Rails, SQL, HTML and CSS."
           />
           <Details
             position="IT Administrator"
