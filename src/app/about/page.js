@@ -48,7 +48,7 @@ export default function Page() {
           <AnimatedText text="Talk About Bruno!" className="mb-16" />
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="col-span-3 flex flex-col items-start justify-start">
-              <h2 className="mb-4 text-lg font-bold text-dark/75 uppercase">
+              <h2 className="mb-4 text-lg font-bold text-dark/75 uppercase dark:text-light/75">
                 About Me
               </h2>
               <p className="font-medium">
@@ -76,9 +76,10 @@ export default function Page() {
             </div>
             <div
               className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark
-            bg-light p-8"
+            bg-light p-8 dark:bg-dark dark:border-light"
             >
-              <div className="absolute top-0 -right-4 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
+              <div className="absolute top-0 -right-4 -z-10 w-[102%] h-[103%] rounded-[2rem] 
+              bg-dark dark:bg-light" />
               <Image
                 src={bioPic}
                 alt="Bruno"
@@ -94,7 +95,7 @@ export default function Page() {
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumbers value={3} />
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
                   Satisfied Clients
                 </h2>
               </div>
@@ -102,7 +103,7 @@ export default function Page() {
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumbers value={6} />
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
                   Projects Completed
                 </h2>
               </div>
@@ -110,7 +111,7 @@ export default function Page() {
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumbers value={1} />
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
                   year of experience
                 </h2>
               </div>
