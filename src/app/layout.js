@@ -15,15 +15,42 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${montserrat.variable} font-sans bg-light w-full min-h-screen`}
-    >
-      <body>
-        <NavBar />
-        {children}
-        <Footer />
-      </body>
-    </html>
+<html
+lang="en">
+<body className={`${montserrat.variable} font-sans bg-light dark:bg-dark w-full min-h-screen`}>
+  <NavBar />
+  {children}
+  <Footer />
+</body>
+</html>
   );
+}
+
+// Original Code
+{
+  /* <html
+lang="en"
+className={`${montserrat.variable} font-sans bg-light dark:bg-dark w-full min-h-screen`}
+>
+<body>
+  <NavBar />
+  {children}
+  <Footer />
+</body>
+</html> */
+}
+
+//Improved code?
+{
+  /* <>
+<Head>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="icon" href="/favicon.ico"/>
+</Head>
+  <main className={`${montserrat.variable} font-sans bg-light dark:bg-dark w-full min-h-screen`}>
+    <NavBar />
+    {children}
+    <Footer />
+  </main>
+</> */
 }

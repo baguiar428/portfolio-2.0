@@ -42,7 +42,8 @@ export default function Page() {
         <title>T.A.B | About</title>
         <meta name="description" content="About Page - Talk About Bruno" />
       </Head>
-      <main className="flex w-full flex-col items-center justify-center">
+      <main className="flex w-full flex-col items-center justify-center
+      dark:text-light">
         <Layout className="pt-16">
           <AnimatedText text="Talk About Bruno!" className="mb-16" />
           <div className="grid w-full grid-cols-8 gap-16">
