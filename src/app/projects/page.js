@@ -1,3 +1,4 @@
+"use client"; //If using Framer for Thumbnail Zoom
 import React from "react";
 import Head from "next/head";
 import Layout from "../components/Layout";
@@ -9,6 +10,9 @@ import ogPortfolio from "../../../public/images/projects/portfolio_v1-1.png";
 import blogPic from "../../../public/images/projects/TAB_Blog.png";
 import assetTransmogrifier from "../../../public/images/projects/asset_transmogrifier.png"
 import newRecoupPic from "../../../public/images/projects/new_recoup_collage.png"
+import {motion} from "framer-motion" //Import for Framer Effects
+
+const FramerLink = motion(Link);
 
 const FeaturedProject = ({
   type,
@@ -23,13 +27,21 @@ const FeaturedProject = ({
     dark:bg-dark dark:border-light">
       <div className="absolute top-0 -right-4 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light" />
 
-      <Link
+      <FramerLink
         href={website}
         target="_blank"
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
+        whileHover={{scale:1.01}}
+        transition={{duration:0.2}}
       >
-        <Image src={picture} alt={title} className="w-full h-auto" />
-      </Link>
+        {/* Change to FramerImage for zoom in effect. Include whileHover and Transition */}
+        <Image src={picture} alt={title} className="w-full h-auto"
+        // whileHover={{scale:1.05}}
+        // transition={{duration:0.2}}
+        priority
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+         />
+      </FramerLink>
       <div className="w-1/2 flex flex-col items-start justify-between pl-6">
         <span className="text-primary font-medium text-xl">{type}</span>
         <Link
@@ -65,13 +77,16 @@ const Project = ({ title, type, summary, picture, website, github }) => {
     <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light">
       <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light" />
 
-      <Link
+      <FramerLink
         href={website}
         target="_blank"
-        className="w-full cursor-pointer overflow-hidden rounded-lg"
+        className="w-full cursor-pointer overflow-hidden rounded-lg
+        "
+        whileHover={{scale:1.01}}
+        transition={{duration:0.2}}
       >
         <Image src={picture} alt={title} className="w-full h-auto" />
-      </Link>
+      </FramerLink>
       <div className="w-full flex flex-col items-start justify-between mt-4">
         <span className="text-primary font-medium text-xl">{type}</span>
         <Link

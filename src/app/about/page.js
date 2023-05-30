@@ -52,7 +52,7 @@ export default function Page() {
                 About Me
               </h2>
               <p className="font-medium">
-                I&apos;m a full-stack developer with a passion for using
+                I&apos;m a fleunt bilingual speaker &#40;Portuguese and English&#41; and full-stack developer with a passion for using
                 technology to solve problems while making life easier...and fun!
                 I have 10+ years of experience in IT across multiple industries.
                 I decided to dive into software development and graduated from
@@ -84,6 +84,8 @@ export default function Page() {
                 src={bioPic}
                 alt="Bruno"
                 className="w-full h-auto rounded-2xl"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             {/* Extra Space to work with.*/}
