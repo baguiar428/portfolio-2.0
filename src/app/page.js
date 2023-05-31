@@ -12,7 +12,7 @@ export default function Home() {
     dark:text-light">
       <Layout className="pt-0 md:pt-16 sm:pt-8">
         <div className="flex items-center justify-between w-full lg:flex-col">
-          <div className="w-1/2">
+          <div className="w-1/2 md:w-full">
             <Image src={heroPic} alt="Bruno Aguiar" className="w-full h-auto 
             lg:hidden md:inline-block md:w-full"
             priority
@@ -26,7 +26,7 @@ export default function Home() {
               className="!text-6xl !text-left
               xl:!text-5xl lg:!text-center lg:!text=6xl md:!text-5xl sm:!text-3xl"
             />
-            <p className="my-4 text-base font-medium">
+            <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
               I&apos;m a full-stack developer who recently decided to shift from
               IT Support to Web Development. Check out my latest projects and
               blog articles and follow me on my journey to making dreams come
@@ -42,13 +42,15 @@ export default function Home() {
                 border-2 border-solid border-transparent hover:border-dark
                 
                 dark:bg-light dark:text-dark 
-                hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
+                hover:dark:bg-dark hover:dark:text-light hover:dark:border-light
+                md:p-2 md:px-4 md:text-base"
                 download={true}>
                 Resume
                 <LinkArrow className={"w-6 ml-1"}/>
               </Link>
               <Link href="mailto:b.aguiar428@gmail.com" target="_blank"
-              className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light">
+              className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light
+              md:text-base">
                 Contact Me
               </Link>
             </div>
