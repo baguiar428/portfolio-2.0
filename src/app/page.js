@@ -5,9 +5,12 @@ import heroPic from "../../public/images/home/hero-pic.png";
 import AnimatedText from "./components/AnimatedText";
 import { LinkArrow } from "./components/Icons";
 import HireMe from "./components/HireMe";
+import TransitionEffect from "./components/TransitionEffect";
 
 export default function Home() {
   return (
+    <>
+    <TransitionEffect/>
     <main className="flex items-center text-dark w-full min-h-screen
     dark:text-light">
       <Layout className="pt-0 md:pt-16 sm:pt-8">
@@ -63,5 +66,6 @@ export default function Home() {
         <Image/>
       </div> */}
     </main>
+    </>
   );
 }

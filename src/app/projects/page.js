@@ -11,6 +11,7 @@ import blogPic from "../../../public/images/projects/TAB_Blog.png";
 import assetTransmogrifier from "../../../public/images/projects/asset_transmogrifier.png"
 import newRecoupPic from "../../../public/images/projects/new_recoup_collage.png"
 import {motion} from "framer-motion" //Import for Framer Effects
+import TransitionEffect from "../components/TransitionEffect";
 
 const FramerLink = motion(Link);
 
@@ -132,6 +133,7 @@ const page = () => {
         <title>T.A.B | Projects</title>
         <meta name="description" content="Projects Page - Talk About Bruno" />
       </Head>
+      <TransitionEffect/>
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText text="Let's Create and Build!" className="mb-16

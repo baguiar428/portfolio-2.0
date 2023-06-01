@@ -9,6 +9,7 @@ import bioPic from "../../../public/images/about/bio_pic.png";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
 import Education from "../components/Education";
+import TransitionEffect from "../components/TransitionEffect";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -42,6 +43,7 @@ export default function Page() {
         <title>T.A.B | About</title>
         <meta name="description" content="About Page - Talk About Bruno" />
       </Head>
+      <TransitionEffect/>
       <main
         className="flex w-full flex-col items-center justify-center
       dark:text-light"
