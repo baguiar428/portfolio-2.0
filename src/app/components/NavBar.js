@@ -80,7 +80,8 @@ const NavBar = () => {
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About" className="mx-4" />
         <CustomLink href="/projects" title="Projects" className="mx-4" />
-        <CustomLink href="/contact" title="Contact" className="ml-4" />
+        {/* This might be redundent. Also mailto: doesn't seem to work */}
+        {/* <CustomLink href="/contact" title="Contact" className="ml-4" /> */}
       </nav>
 
       <nav className="flex items-center justify-center flex-wrap">
