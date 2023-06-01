@@ -38,6 +38,22 @@ export const LinkedInIcon = ({ className, ...rest }) => (
   </svg>
 );
 
+export const EmailIcon = ({ className, ...rest }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" 
+  width={24} 
+  height={24}
+  viewBox="0 0 24 24"
+  className={`w-full h-auto ${className}`} 
+  {...rest}>
+    <path
+      fill="currentColor"
+      fillRule="evenodd"
+      d="M2.234 4.357A.996.996 0 0 0 2 5v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V5.01a1.006 1.006 0 0 0-.364-.781.996.996 0 0 0-.632-.229H3a.997.997 0 0 0-.766.357ZM4 7.414V17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7.414l-7.293 7.293a1 1 0 0 1-1.414 0L4 7.414Z"
+      clipRule="evenodd"
+    />
+  </svg>
+)
+
 export const BlogIcon = ({ className, ...rest }) => (
     <svg 
      xmlns="http://www.w3.org/2000/svg" 
