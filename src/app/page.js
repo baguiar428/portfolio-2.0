@@ -31,9 +31,8 @@ export default function Home() {
             />
             <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
               I&apos;m a full-stack developer who recently decided to shift from
-              IT Support to Web Development. Check out my latest projects and
-              blog articles and follow me on my journey to making dreams come
-              true!
+              IT Support to Web Development. Check out my latest projects and blog articles.
+              Follow me on my journey to making dreams come true!
             </p>
             <div className='flex items-center self-start mt-2 lg:justify-center'>
               <Link
