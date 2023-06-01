@@ -35,7 +35,7 @@ export default function Home() {
               blog articles and follow me on my journey to making dreams come
               true!
             </p>
-            <div className='flex items-center self-start mt-2 lg:self-center'>
+            <div className='flex items-center self-start mt-2 lg:justify-center'>
               <Link
                 href="/Bruno_Aguiar-Resume.pdf"
                 target="_blank"
