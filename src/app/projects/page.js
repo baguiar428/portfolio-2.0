@@ -146,7 +146,7 @@ const page = () => {
                 title="Portfolio 1.0"
                 picture={ogPortfolio}
                 summary="Original version of my portfolio page. Used Next.js with Pages Router and Tailwind CSS."
-                website="https://github.com/baguiar428/Portfolio"
+                website="https://portfolio-ebon-five-14.vercel.app/"
                 type="Featured Project"
                 github="https://github.com/baguiar428/Portfolio"
               />
