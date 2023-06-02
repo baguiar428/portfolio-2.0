@@ -64,7 +64,7 @@ md:w-[2px] md:left-[30px] xs:left-[20px]"/>
           />
           <Details
             type="Bachelors Degree in Liberal Arts, Information Technology"
-            time="Jan 2015 - May 2017"
+            time="May 2011"
             place="Rutgers University, New Brunswick"
           />
         </ul>
