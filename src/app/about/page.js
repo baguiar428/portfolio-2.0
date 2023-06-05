@@ -56,7 +56,7 @@ export default function Page() {
                 About Me
               </h2>
               <p className="font-medium">
-                I&apos;m a fleunt bilingual speaker &#40;Portuguese and
+                I&apos;m a native bilingual speaker &#40;Portuguese and
                 English&#41; and full-stack developer with a passion for using
                 technology to solve problems while making life easier...and fun!
                 I have 10+ years of experience in IT across multiple industries.
