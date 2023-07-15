@@ -4,6 +4,7 @@ import "./globals.css";
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
 import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/react';
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ lang="en">
   </Script>
   <NavBar />
   {children}
+  <Analytics />
   <Footer />
 </body>
 </html>
